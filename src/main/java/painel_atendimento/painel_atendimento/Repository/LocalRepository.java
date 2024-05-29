@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import painel_atendimento.painel_atendimento.Entidades.Local;
 
 @Repository
-public interface localRepository extends JpaRepository<Local, Long> {
+public interface LocalRepository extends JpaRepository<Local, Long> {
 }

@@ -2,14 +2,10 @@ package painel_atendimento.painel_atendimento.Controladores;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import painel_atendimento.painel_atendimento.Entidades.Classificacao;
 import painel_atendimento.painel_atendimento.Entidades.Ficha;
-import painel_atendimento.painel_atendimento.Entidades.Letra;
-import painel_atendimento.painel_atendimento.Entidades.Local;
-import painel_atendimento.painel_atendimento.Repository.classificacaoRepository;
-import painel_atendimento.painel_atendimento.Repository.fichaRepository;
-import painel_atendimento.painel_atendimento.Repository.letraRepository;
-import painel_atendimento.painel_atendimento.Repository.localRepository;
+import painel_atendimento.painel_atendimento.Repository.FichaRepository;
+import painel_atendimento.painel_atendimento.Repository.LetraRepository;
+import painel_atendimento.painel_atendimento.Repository.LocalRepository;
 
 import java.util.List;
 
@@ -18,13 +14,13 @@ import java.util.List;
 public class fichaController {
 
     @Autowired
-    private fichaRepository ficharepository;
+    private FichaRepository ficharepository;
 
     @Autowired
-    private localRepository localrepository;
+    private LocalRepository localrepository;
 
     @Autowired
-    private letraRepository letrarepository;
+    private LetraRepository letrarepository;
 
     @GetMapping
     public List<Ficha> getAllFichas(){

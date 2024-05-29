@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import painel_atendimento.painel_atendimento.Entidades.Letra;
 
 @Repository
-public interface letraRepository extends JpaRepository<Letra, Long> {
+public interface LetraRepository extends JpaRepository<Letra, Long> {
 }
