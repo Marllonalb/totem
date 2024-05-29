@@ -38,7 +38,7 @@ public class fichaController {
             @RequestParam Long classificacaoId,
             @RequestParam String descricao){
         //Letra letra = letraRepository.findById(letraId).orElseThrow(() -> new RuntimeException("Letra não encontrada"));
-        Local local = localrepository.findById(localId).orElseThrow(()-> new RuntimeException("Local não encontrado"));
+        //Local local = localrepository.findById(localId).orElseThrow(()-> new RuntimeException("Local não encontrado"));
         //Classificacao classificacao = classificacaoRepository.findById(classificacaoId).orElseThrow(()-> new RuntimeException("Classificação não encontrada"));
 //        Letra letra =
     }
