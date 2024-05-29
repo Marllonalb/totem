@@ -18,4 +18,8 @@ public class Local {
     private LocalDateTime createdAt;
     private String createdBy;
 
+    @ManyToOne
+    @JoinColumn(name = "unidade_id")
+    private Unidade unidade;
+
 }
