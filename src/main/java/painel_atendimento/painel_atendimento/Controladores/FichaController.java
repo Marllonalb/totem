@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/fichas")
-public class fichaController {
+public class FichaController {
 
     @Autowired
     private FichaRepository ficharepository;
