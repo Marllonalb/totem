@@ -4,7 +4,9 @@ import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import painel_atendimento.painel_atendimento.Entidades.Local;
 import painel_atendimento.painel_atendimento.Entidades.Unidade;
+import painel_atendimento.painel_atendimento.Repository.LocalRepository;
 import painel_atendimento.painel_atendimento.Repository.UnidadeRepository;
 
 import java.util.List;
@@ -16,6 +18,9 @@ public class UnidadeController {
 
     @Autowired
     private UnidadeRepository unidadeRepository;
+
+    @Autowired
+    private LocalRepository localRepository;
 
     @GetMapping
     public List<Unidade> getAllUnidades(){
@@ -59,6 +64,20 @@ public class UnidadeController {
             return ResponseEntity.noContent().build();
         }else {
             return ResponseEntity.notFound().build();
+        }
+    }
+
+
+    //Listar locais por unidade
+    @GetMapping("/{unidadeId}/locais")
+    public ResponseEntity<List<Local>> listarPorUnidade(@PathVariable Long unidadeId){
+        Optional<Unidade> unidadeOptional = unidadeRepository.findById(unidadeId);
+        if(unidadeOptional.isPresent()){
+            List<Local> locais = localRepository.findByUnidadeId(unidadeId);
+            return ResponseEntity.ok(locais);
+        }else{
+            return ResponseEntity.notFound().build();
+
         }
     }
 

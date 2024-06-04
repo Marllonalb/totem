@@ -1,6 +1,7 @@
 package painel_atendimento.painel_atendimento.Entidades;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -20,6 +21,7 @@ public class Local {
 
     @ManyToOne
     @JoinColumn(name = "unidade_id")
+    @JsonBackReference
     private Unidade unidade;
 
 }
