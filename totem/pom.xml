@@ -8,7 +8,7 @@
 		<version>3.3.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.unimedjp</groupId>
+	<groupId>br.com.teste</groupId>
 	<artifactId>painel-atendimento</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
@@ -17,16 +17,9 @@
 
 	<developers>
 		<developer>
-			<id>marllon.albuquerque</id>
 			<name>Marllon Albuquerque</name>
-			<organization>Unimed JP</organization>
-			<email>marllon.albuquerque@unimedjp.com.br</email>
-		</developer>
-		<developer>
-			<id>gideao.silva</id>
-			<name>Gideao Martins da silva</name>
-			<organization>Unimed JP</organization>
-			<email>gideao.silva@unimedjp.com.br</email>
+			<organization>Teste</organization>
+
 		</developer>
 	</developers>
 
